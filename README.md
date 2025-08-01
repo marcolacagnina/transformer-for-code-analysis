@@ -1,6 +1,6 @@
-# Pytorch Transformer for code complexity classification
+# PyTorch Transformer for code complexity classification
 
-This project is a Pythorch Transformer classifier, with the aim to classify the time complexity of a Python code. 
+This project is a PyTorch Transformer classifier, with the aim to classify the time complexity of a Python code. 
 In particular, the model classify within 7 classes:
 - O(1)
 - O(logn)

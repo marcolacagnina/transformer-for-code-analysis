@@ -3,7 +3,5 @@ transformers
 datasets
 scikit-learn
 matplotlib
-black
-astor
 numpy
 tqdm

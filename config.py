@@ -1,28 +1,25 @@
 import os
 import torch
 
-
-BASE_DIR = os.path.dirname(os.path.abspath(__file__))
-DATA_DIR = os.path.join(BASE_DIR, "data")
-
-RAW_DATA_PATH = os.path.join(DATA_DIR, "problem_and_human_solutions_list.jsonl")
-COMPLEXITY_MAPPING_PATH = os.path.join(DATA_DIR, "solution_id_to_complexity.json")
-
-PROCESSED_DATASET_PATH = os.path.join(DATA_DIR, "final_dataset.json")
-
 # --- Project Paths ---
 BASE_DIR = os.path.dirname(os.path.abspath(__file__))
 DATA_DIR = os.path.join(BASE_DIR, "data")
 OUTPUT_DIR = os.path.join(BASE_DIR, "outputs")
 
-# --- Data Files ---
-PROCESSED_DATASET_PATH = os.path.join(DATA_DIR, "final_dataset.json")
+# --- Data & Model I/O ---
+# The pre-processed dataset is the main input for the project
+DATASET_PATH = os.path.join(DATA_DIR, "final_dataset.json")
 MODEL_SAVE_PATH = os.path.join(OUTPUT_DIR, "best_model.pt")
 PLOT_SAVE_PATH = os.path.join(OUTPUT_DIR, "training_progress.png")
 
 # --- Model & Tokenizer Config ---
 TOKENIZER_NAME = "microsoft/codebert-base"
 MAX_TOKEN_LENGTH = 512
+CUSTOM_TAGS = [
+    '<IMPORTS_START>', '<IMPORTS_END>',
+    '<FUNC_DEF_START>', '<FUNC_DEF_END>',
+    '<GLOBAL_CODE_START>', '<GLOBAL_CODE_END>'
+]
 
 # --- Model Hyperparameters ---
 D_MODEL = 256
@@ -45,10 +42,3 @@ ES_DELTA = 1e-4
 
 # --- Random Seed ---
 SEED = 42
-
-# --- Custom Tags for Tokenizer ---
-CUSTOM_TAGS = [
-    '<IMPORTS_START>', '<IMPORTS_END>',
-    '<FUNC_DEF_START>', '<FUNC_DEF_END>',
-    '<GLOBAL_CODE_START>', '<GLOBAL_CODE_END>'
-]

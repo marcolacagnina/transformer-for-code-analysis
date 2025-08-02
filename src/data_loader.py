@@ -15,7 +15,7 @@ def get_dataloaders(config):
     random.seed(config.SEED)
 
     # --- Load and Pre-process Data ---
-    with open(config.PROCESSED_DATASET_PATH, "r") as f:
+    with open(config.DATASET_PATH, "r") as f:
         processed_dataset = json.load(f)
 
     # --- Initialize Tokenizer ---

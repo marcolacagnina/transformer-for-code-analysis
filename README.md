@@ -1,5 +1,10 @@
 # PyTorch Transformer for code complexity classification
 
+![Python 3.9+](https://img.shields.io/badge/Python-3.9+-blue.svg)
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
+[![arXiv](https://img.shields.io/badge/arXiv-2503.15242-b31b1b.svg)](https://arxiv.org/abs/2503.15242)
+
+
 ## Project Overview
 
 This project implements a Transformer-based neural network to classify the time complexity of Python code solutions. 
@@ -91,7 +96,7 @@ To train the model, run the main training script:
 python train.py
 ```
 
-## Output
+## Outputs
 Running the training script via `python train.py` will generate the following files inside the `outputs/` directory:
 
 * **`best_model.pt`**: This file contains the state dictionary of the best performing model, saved based on the highest validation accuracy achieved during training. You can load this file to make predictions or continue training.

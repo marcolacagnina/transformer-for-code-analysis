@@ -17,6 +17,54 @@ The model is trained on `final_dataset.json`, a pre-processed dataset included i
 The original data was sourced from the [**BigOBench**](https://huggingface.co/datasets/facebook/BigOBench) dataset and has been cleaned, normalized, and filtered to prepare it for the complexity classification task. 
 The pre-processing steps are not included in this repository to maintain focus on the modeling and training pipeline.
 
+## Prerequisites
+
+To run this project, you will need the following installed on your system:
+
+* **Python 3.9+**
+* **pip** (Python package installer)
+* **Git LFS** (Large File Storage) to handle the dataset file.
+
+An hardware accelerator is highly recommended for training the model in a reasonable amount of time:
+* NVIDIA GPU with **CUDA** support.
+* The scripts will fall back to **CPU** if no GPU is available, but training will be significantly slower.
+
+## Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/marcolacagnina/transformer-for-code-analysis.git
+    cd transformer-for-code-analysis/
+    ```
+
+2.  **Download the dataset:**
+    After cloning, you need to pull the LFS files to download the actual dataset:
+    ```bash
+    git lfs pull
+    ```
+
+3.  **Create a virtual environment (Recommended):**
+    ```bash
+    python3 -m venv venv
+    source venv/bin/activate  # On Windows, use `venv\Scripts\activate`
+    ```
+
+4.  **Install the required packages:**
+    ```bash
+    pip install -r requirements.txt
+    ```
+
+## Usage
+
+To train the model, run the main training script:
+```bash
+python train.py
+```
+
+## Output
+Model checkpoints and training plots will be saved in the `outputs/` directory.
+
+
 ### Citation
 
 ```bibtex

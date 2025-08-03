@@ -1,6 +1,10 @@
 # PyTorch Transformer for code complexity classification
 
-This project is a PyTorch Transformer classifier, with the aim to classify the time complexity of a Python code. 
+## Project Overview
+
+This project implements a Transformer-based neural network to classify the time complexity of Python code solutions. 
+The model analyzes the structure and semantics of a given code snippet and predicts its Big O notation (e.g., O(n), O(log n), etc.).
+
 In particular, the model classifies within 7 classes:
 - O(1)
 - O(logn)
@@ -9,6 +13,32 @@ In particular, the model classifies within 7 classes:
 - O(n*m)
 - O(n+m)
 - O(n*logn)
+
+The workflow is as follows:
+1.  Python code snippets are tokenized using a pre-trained `microsoft/codebert-base` tokenizer, which has been augmented with custom tags to identify code structure.
+2.  The model, built with a **Transformer Encoder architecture**, processes the token sequences to learn a representation of the code.
+3.  A final classification layer predicts the corresponding time complexity class.
+
+## Configuration & Hyperparameters ⚙️
+The main hyperparameters and configuration settings used for training are centralized in the `config.py` file. 
+The key parameters for the final model are listed below.
+
+| Parameter             | Value                     | Description                               |
+| --------------------- | ------------------------- | ----------------------------------------- |
+| **Model Architecture**|                           |                                           |
+| `D_MODEL`             | 256                       | The embedding dimension for the model.    |
+| `N_HEAD`              | 8                         | Number of heads in the Multi-Head Attention. |
+| `NUM_LAYERS`          | 4                         | Number of Transformer Encoder layers.     |
+| `DROPOUT`             | 0.4                       | Dropout rate for regularization.          |
+| **Training** |                           |                                           |
+| `NUM_EPOCHS`          | 30                        | Maximum number of training epochs.        |
+| `BATCH_SIZE`          | 64                        | Number of samples per batch.              |
+| `LEARNING_RATE`       | 1e-4                      | Initial learning rate for the Adam optimizer. |
+| **Data & Tokenizer** |                           |                                           |
+| `TOKENIZER_NAME`      | `microsoft/codebert-base` | Specialized tokenizer for parsing programming languages. |
+| `MAX_TOKEN_LENGTH`    | 512                       | Maximum sequence length for the tokenizer.|
+
+
 
 ## Dataset
 

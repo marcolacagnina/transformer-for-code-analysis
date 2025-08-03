@@ -62,8 +62,15 @@ python train.py
 ```
 
 ## Output
-Model checkpoints and training plots will be saved in the `outputs/` directory.
+Running the training script via `python train.py` will generate the following files inside the `outputs/` directory:
 
+* **`best_model.pt`**: This file contains the state dictionary of the best performing model, saved based on the highest validation accuracy achieved during training. You can load this file to make predictions or continue training.
+
+* **`training_progress.png`**: This is an image file that visualizes the training process, plotting the training loss and validation accuracy for each epoch.
+
+### Training Performance
+
+![Training Progress](outputs/training_progress.png)
 
 ### Citation
 

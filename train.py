@@ -92,7 +92,7 @@ def main():
     criterion = nn.CrossEntropyLoss(weight=class_weights, label_smoothing=config.LABEL_SMOOTHING)
     optimizer = optim.Adam(model.parameters(), lr=config.LEARNING_RATE, weight_decay=config.WEIGHT_DECAY)
     scheduler = optim.lr_scheduler.ReduceLROnPlateau(optimizer, 'max', factor=0.5, patience=2)
-    scaler = GradScaler()
+    scaler = torch.amp.GradScaler(config.DEVICE)
 
     # --- 3. Training Loop ---
     best_accuracy = 0.0

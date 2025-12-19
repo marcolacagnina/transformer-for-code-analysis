@@ -4,6 +4,23 @@
 ![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)
 [![arXiv](https://img.shields.io/badge/arXiv-2503.15242-b31b1b.svg)](https://arxiv.org/abs/2503.15242)
 
+<details>
+  <summary><strong>Table of Contents</strong></summary>
+  <ol>
+    <li><a href="#project-overview">Project Overview</a></li>
+    <li><a href="#configuration--hyperparameters-️">Configuration & Hyperparameters</a></li>
+    <li><a href="#dataset">Dataset</a></li>
+    <li><a href="#prerequisites">Prerequisites</a></li>
+    <li><a href="#installation">Installation</a></li>
+    <li><a href="#usage">Usage</a></li>
+    <li><a href="#outputs">Outputs</a>
+        <ul>
+            <li><a href="#training-performance">Training Performance</a></li>
+            <li><a href="#citation">Citation</a></li>
+        </ul>
+    </li>
+  </ol>
+</details>
 
 ## Project Overview
 

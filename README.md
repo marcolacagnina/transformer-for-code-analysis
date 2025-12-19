@@ -7,7 +7,7 @@
 <details>
   <summary><strong>Table of Contents</strong></summary>
   <ol>
-    <li><a href="introduction">Introduction</a></li>
+    <li><a href="#introduction">Introduction</a></li>
     <li><a href="#project-overview">Project Overview</a></li>
     <li><a href="#configuration--hyperparameters-️">Configuration & Hyperparameters</a></li>
     <li><a href="#dataset">Dataset</a></li>
@@ -21,7 +21,7 @@
         </ul>
     </li>
   </ol>
-</details
+</details>
 
 ## Introduction
 This repository was born from the Natural Language Processing (NLP) course project, part of the Computer Science Engineering master's degree at Politecnico di Milano.

@@ -26,7 +26,7 @@
 ## Introduction
 This repository was born from the Natural Language Processing (NLP) course project, part of the Computer Science Engineering master's degree at Politecnico di Milano.
 The notebooks of interest are grouped in the `notebooks/` directory:
-- `Creating_Dataset.ipynb`: the initial pre-processing of the dataset taken from [**Hugging Face**](https://huggingface.co/).
+- `Creating_Dataset.ipynb`: the initial pre-processing of the [**BigOBench**](https://huggingface.co/datasets/facebook/BigOBench) dataset taken from [**Hugging Face**](https://huggingface.co/).
 - `CustomTransformer.ipynb`: designing, training and evaluation of the main Transformer Model.
 - `Fine-TuningCodeComplex.ipynb`: Improve Main Transformer Model by Fine-Tuning using a **cleaner** dataset: [**Code Complex**](https://arxiv.org/abs/2401.08719).
 - `TestingCodeComplex.ipynb`: Load different NLP models (Linear classifier, LSTM, custom Transformer and fine-tuned LLM [**CodeBERT**](https://arxiv.org/abs/2002.08155)) and evaluate their performance on the codeComplex dataset.

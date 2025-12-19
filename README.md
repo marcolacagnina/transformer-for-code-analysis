@@ -25,7 +25,7 @@
 
 ## Introduction
 This repository was born from the Natural Language Processing (NLP) course project, part of the Computer Science Engineering master's degree at Politecnico di Milano.
-The notebooks written by the repository owner are grouped in the `notebooks/` directory. In particular, the notebooks are:
+The notebooks of interest are grouped in the `notebooks/` directory:
 - `Creating_Dataset.ipynb`: the initial pre-processing of the dataset taken from [**Hugging Face**](https://huggingface.co/).
 - `CustomTransformer.ipynb`: designing, training and evaluation of the main Transformer Model.
 - `Fine-TuningCodeComplex.ipynb`: Improve Main Transformer Model by Fine-Tuning using a **cleaner** dataset: [**Code Complex**](https://arxiv.org/abs/2401.08719).
